@@ -2,7 +2,7 @@
 
 Perform bank-switching on target EPROMs with an ATTiny85.
 
-* Control 8 / 16 banks: 0x000 to 0x111 / 0x1111
+* Control 8 / 16 banks: 0x000 to 0b111 / 0b1111
 * Change bank with button press (active LOW)
 * Reset a target PCB 
 * Non-volatile storage tracks current bank between power-cycles 

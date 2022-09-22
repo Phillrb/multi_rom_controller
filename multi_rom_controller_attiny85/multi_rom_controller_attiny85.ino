@@ -2,25 +2,24 @@
 // ATTiny85 as a Multi-ROM controller
 // Phillip Riscombe-Burton 2022
 //
-// - Changes target EPROM bank on button press
-// - Controls 8 / 16 banks: 0x000 to 0x111 / 0x1111
-// - Controls 16 banks with A3 enabled (but stops 'easy' reprogramming of ATTiny85)
-// - Change bank with button press on ACTION_PIN (active LOW)
-// - Reset target with RESET_TARGET_PIN
-// - Uses ATTiny85 EEPROM to record current bank 
+// - Changes target EPROM bank on button press on ACTION_PIN (active LOW)
+// - Controls up to 16 banks with A3 enabled: 0b0000 to 0b1111
+// - Controls up to 8 banks with A3 disabled: 0b000 to 0b111
+// - Reset target with RESET_TARGET_PIN (active LOW)
+// - Uses ATTiny85 EEPROM to persist current bank
 //
-// Program ATTiny85 with Arduino Nano as 'easy' programmer
+// To program ATTiny85 with Arduino Nano:
 //
 // INITIAL SETUP OF NANO
 // File >> Examples >> ArduinoISP 
 // Programmer >> Arduino as ISP (Old Bootloader)
 // Upload sketch
 //
-// PROGRAM ATTiny85
+// PROGRAM ATTiny85 WITH NANO:
 // Sketch >> Uplaod Using Programmer
 //
-// Alternatively program ATTiny85 with TL866 or similar.
-// These can set the fuse bits when A3 is enabled.
+// Alternatively program ATTiny85 with TL866 or similar;
+// (the only option when A3 is enabled)
 // Sketch >> Export compiled Binary
 //
 //        ATTINY85
@@ -30,8 +29,8 @@
 //  RESET -|    |- A1
 //    GND -|____|- A0
 //
-// *Controlling A3 will prevent easy reprogramming of ATTiny85.
-// TL866 programmer must be used to set the fuse bits.
+// *Controlling A3 will prevent reprogramming of ATTiny85.
+// TL866 programmer or similar must be used to reset the fuse bits.
 
 #include <EEPROM.h>
 
