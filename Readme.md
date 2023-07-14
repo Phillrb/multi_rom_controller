@@ -5,7 +5,8 @@ Perform bank-switching on target EPROMs with an ATTiny85/45/25/13.
 * Control 8 / 16 banks: 0x000 to 0b111 / 0b1111
 * Change bank with button press or hold
 * Reset a target PCB 
-* Non-volatile storage tracks current bank between power-cycles 
+* Non-volatile storage tracks current bank between power-cycles
+* Alternatively use as a 'hold for coin-up' mod by connecting RESET to Coin and ACTION to P1 Start
 
 ```
   ATTINY85/45/25/13
