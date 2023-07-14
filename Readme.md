@@ -41,8 +41,8 @@ Set 'ENABLE_A3' to true
 - reduce hold time to 2 seconds
 - program ATTiny85
 - hot glue ATTiny85 to P1 microswitch
-- connect pin 4 to P1 microswitch GND line
-- connect pin 2 to P1 microswitch N/O line
-- connect pin 8 to JAMMA harness 5v line
-- connect pin 3 to JAMMA harness coin line
+- connect pin 4 to P1 microswitch GND
+- connect pin 2 to P1 microswitch N/O
+- connect pin 8 to JAMMA harness 5v
+- connect pin 3 to JAMMA harness Coin
 - hold P1 Start for 2 seconds to simulate insert coin
