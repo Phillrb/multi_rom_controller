@@ -34,3 +34,15 @@ Connect address lines (A0 to A3 - pins 5,6,7 & 1) to target EPROMs' upper addres
 ## Enabling A3 (Pin 1)
 
 Set 'ENABLE_A3' to true
+
+## Alternative Hold for Coin-up
+
+- Set HOLD_FOR_BANKSWITCH to true
+- reduce hold time to 2 seconds
+- program ATTiny85
+- hot glue ATTiny85 to P1 microswitch
+- connect pin 4 to P1 microswitch GND line
+- connect pin 2 to P1 microswitch N/O line
+- connect pin 8 to JAMMA harness 5v line
+- connect pin 3 to JAMMA harness coin line
+- hold P1 Start for 2 seconds to simulate insert coin
